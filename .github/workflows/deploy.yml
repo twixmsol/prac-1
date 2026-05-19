@@ -1,15 +1,15 @@
 name: nazvanie
 on:
- push:
-  branches:
-   - main
-   - develop
+  push:
+    branches:
+      - main
+      - develop
 jobs:
- check-project:
-  runs-on: ubuntu-latest
+  check-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  steps:
-  - uses: actions/checkout@v4
-
-  - name: Repositoey check
-   run: echo "Repository updated"
+      - name: Repository check
+        run: echo "Repository updated"
